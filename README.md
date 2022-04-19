@@ -4,13 +4,10 @@ Everything about javascript
 
 Essential JS CDN for referencing, currently consist of:
 
-jquery 3.6.0 dist
-
-web3 3.0.0 dist
-
-moment 2.29.2
-
-ipfs-api 26.1.2 dist
+- jquery 3.6.0 dist<br>
+- web3 3.0.0 dist<br>
+- moment 2.29.2<br>
+- ipfs-api 26.1.2 dist<br>
 
 Examples:
 
