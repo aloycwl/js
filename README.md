@@ -14,7 +14,7 @@ ipfs-api 26.1.2 dist
 
 Examples:
 
-<b>Web3 upload files to ipfs</b>
+<b>Web3 upload files to ipfs</b><br>
 The only 100% working Javascript to IPFS example currently. <br>
 No node.js, no NPM, no react. Simply import from CDN and run the code.<br>
 No login is required, it will return the CID.<br>
