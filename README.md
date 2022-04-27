@@ -29,4 +29,5 @@ Can only fetch information, if need to write will require memonic phase signing
 
 <b>IFPS_Upload_Canvas.html</b><br>
 Merge multiple images to canvas and convert it into base64<br>
-Convert base64 into a file object and upload to IPFS
+Convert base64 into a file object and upload to IPFS<br>
+Added promise for async to only allow ipfs action after all images are loaded
