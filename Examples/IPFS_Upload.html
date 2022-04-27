@@ -1,17 +1,25 @@
 <script src="https://aloycwl.github.io/js/cdn/ipfs-api.min.js"></script>
 
 <script>
-const pro=await new Promise((d)=>{
-    const reader=new FileReader();
-    reader.onloadend=()=>{ipfs.add(ipfs.Buffer.from(reader.result)).then(files=>{d(files)});};
-    reader.readAsArrayBuffer(new File([JSON.stringify({
-    "name":"Example Name",
-    "description":"Example Dscription",
-    "image":"ipfs://asdsadasd",
-    "date":Date.now(),
-    "attributes":[
-      {"trait_type":"Colour","Black"}]
-    })],'application/json'));
-  });
-  cid=pro[0].hash;
+  async function load() {
+    var txt = '"trait_type":"',
+      ipfs = IpfsApi({
+        host: 'ipfs.infura.io',
+        port: 5001,
+        protocol: 'https',
+      }),
+      pro = await new Promise((d) => {
+        var reader = new FileReader();
+        reader.onloadend = () => {
+          ipfs.add(ipfs.Buffer.from(reader.result)).then((files) => {
+            d(files);
+          });
+        };
+        reader.readAsArrayBuffer(
+          new File([`{"name":"Whooli Hootie}`], 'application/json')
+        );
+      });
+    console.log(pro[0].hash);
+  }
+  load();
 </script>
