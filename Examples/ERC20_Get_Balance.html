@@ -2,23 +2,19 @@
 <script>
   async function load() {
     web3 = new Web3(ethereum);
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-    let abi2 = [
-      {
-        constant: true,
-        inputs: [{ name: '_owner', type: 'address' }],
-        name: 'balanceOf',
-        outputs: [{ name: 'balance', type: 'uint256' }],
-        type: 'function',
-      },
-    ];
-
     contract = new web3.eth.Contract(
-      abi2,
+      [
+        {
+          constant: true,
+          inputs: [{ name: '', type: 'address' }],
+          name: 'balanceOf',
+          outputs: [{ name: '', type: 'uint256' }],
+          type: 'function',
+        },
+      ],
       '0x34A85f092877F93584ab9f4fe9aE2FFA8C846B1F'
     );
-    console.log(
+    document.write(
       (await contract.methods
         .balanceOf('0x15eD406870dB283E810D5885e432d315C94DD0dd')
         .call()) /
