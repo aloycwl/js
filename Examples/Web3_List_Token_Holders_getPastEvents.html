@@ -9,20 +9,20 @@
           inputs: [
             {
               indexed: true,
-              internalType: 'address',
-              name: 'from',
+              internalType: '',
+              name: '',
               type: 'address',
             },
             {
               indexed: true,
-              internalType: 'address',
+              internalType: '',
               name: 'to',
               type: 'address',
             },
             {
               indexed: true,
-              internalType: 'uint256',
-              name: 'tokenId',
+              internalType: '',
+              name: '',
               type: 'uint256',
             },
           ],
@@ -44,6 +44,7 @@
             arr.push(event.returnValues.to);
         });
       });
+    console.log(arr);
   }
   load();
 </script>
