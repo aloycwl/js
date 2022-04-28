@@ -31,3 +31,7 @@ Can only fetch information, if need to write will require memonic phase signing
 Merge multiple images to canvas and convert it into base64<br>
 Convert base64 into a file object and upload to IPFS<br>
 Added promise for async to only allow ipfs action after all images are loaded
+
+<b>Web3_List_Token_Holders_getPastEvents.html</b><br>
+Using ABI and contract address to get all emitted events with the owner addresses<br>
+Put them into an unique only array
