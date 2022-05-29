@@ -37,13 +37,15 @@ async function load(a, b) {
     }
     contract = new web3.Contract(a, b);
     contract = contract.methods;
-    if (typeof W !== 'undefined') {
+    if (typeof WB != 'undefined') {
       web3a = new Web3(WB);
       web3a = web3a.eth;
       contracta = new web3a.Contract(a, b);
       contracta = contracta.methods;
     }
   }
+  if (typeof CSS != 'undefined')
+    $('head').append($('<link rel="stylesheet">').attr('href', CSS));
 }
 async function load2() {
   contract2 = new web3a.Contract(
