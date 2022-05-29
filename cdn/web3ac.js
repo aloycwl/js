@@ -99,4 +99,5 @@ async function load2() {
     ],
     CA2
   );
+  contract2 = contract2.methods;
 }
