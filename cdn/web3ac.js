@@ -50,11 +50,11 @@ function formatURL(u) {
   return u;
 }
 async function load(a, b) {
-  if (typeof CSS != 'undefined')
+  if (typeof CS != 'undefined')
     $('head').append(
       $(
         '<meta name="viewport"content="width=device-width,initial-scale=1.0"><link rel="stylesheet">'
-      ).attr('href', CSS)
+      ).attr('href', CS)
     );
   if (typeof ethereum != 'undefined') {
     web3 = new Web3(ethereum);
