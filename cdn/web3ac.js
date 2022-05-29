@@ -22,6 +22,8 @@ async function LB() {
   return (await contract2.methods.balanceOf(acct).call()) / 1e18;
 }
 async function load(a, b) {
+  if (typeof CSS != 'undefined')
+    $('head').append($('<link rel="stylesheet">').attr('href', CSS));
   if (typeof ethereum != 'undefined') {
     web3 = new Web3(ethereum);
     web3 = web3.eth;
@@ -44,8 +46,6 @@ async function load(a, b) {
       contracta = contracta.methods;
     }
   }
-  if (typeof CSS != 'undefined')
-    $('head').append($('<link rel="stylesheet">').attr('href', CSS));
 }
 async function load2() {
   contract2 = new web3a.Contract(
