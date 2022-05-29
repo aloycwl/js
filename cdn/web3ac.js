@@ -23,8 +23,6 @@ async function LB() {
 }
 async function load(a, b) {
   if (typeof ethereum != 'undefined') {
-    web3a = new Web3(WB);
-    web3a = web3a.eth;
     web3 = new Web3(ethereum);
     web3 = web3.eth;
     acct = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -39,8 +37,12 @@ async function load(a, b) {
     }
     contract = new web3.Contract(a, b);
     contract = contract.methods;
-    contracta = new web3a.Contract(a, b);
-    contracta = contracta.methods;
+    if (typeof W !== 'undefined') {
+      web3a = new Web3(WB);
+      web3a = web3a.eth;
+      contracta = new web3a.Contract(a, b);
+      contracta = contracta.methods;
+    }
   }
 }
 async function load2() {
