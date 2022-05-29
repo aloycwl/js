@@ -18,6 +18,9 @@ u4 = {
   name: '',
   type: 'address[]',
 };
+function waitTxt(a, b) {
+        $('#'+b).html(a > 0 ? 'Loading...' : '');
+      }
 async function LB() {
   return (await contract2.methods.balanceOf(acct).call()) / 1e18;
 }
