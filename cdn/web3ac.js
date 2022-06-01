@@ -13,7 +13,7 @@ function waitTxt(a, b) {
   $('#' + b).html(a > 0 ? 'Loading...' : '');
 }
 async function LB() {
-  return (await contract2.methods.balanceOf(acct).call()) / 1e18;
+  return (await contract2.balanceOf(acct).call()) / 1e18;
 }
 function formatURL(u) {
   if (u.includes('ipfs://') && u.length > 9)
