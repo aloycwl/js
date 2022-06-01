@@ -32,6 +32,14 @@ u6 = {
   name: '',
   type: uc + u0,
 };
+IA = {
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+}
+FA = {
+  from: acct,
+}
 function waitTxt(a, b) {
   $('#' + b).html(a > 0 ? 'Loading...' : '');
 }
