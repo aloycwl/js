@@ -69,7 +69,6 @@ async function load(a, b) {
     web3 = web3.eth;
     acct = await ethereum.request({ method: 'eth_requestAccounts' });
     acct = acct[0];
-    frm = { from: acct };
     if ((await web3.net.getId()) != CHAIN) {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
