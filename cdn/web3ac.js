@@ -1,45 +1,14 @@
 u0 = '[]';
 ua = 'uint256';
-u1 = {
-  internalType: ua,
-  name: '',
-  type: ua,
-};
-u2 = {
-  internalType: ua + u0,
-  name: '',
-  type: ua + u0,
-};
+u1 = { internalType: ua, name: '', type: ua };
+u2 = { internalType: ua + u0, name: '', type: ua + u0 };
 ub = 'address';
-u3 = {
-  internalType: ub,
-  name: '',
-  type: ub,
-};
-u4 = {
-  internalType: ub + u0,
-  name: '',
-  type: ub + u0,
-};
+u3 = { internalType: ub, name: '', type: ub };
+u4 = { internalType: ub + u0, name: '', type: ub + u0 };
 uc = 'string';
-u5 = {
-  internalType: uc,
-  name: '',
-  type: uc,
-};
-u6 = {
-  internalType: uc + u0,
-  name: '',
-  type: uc + u0,
-};
-IA = {
-  host: 'ipfs.infura.io',
-  port: 5001,
-  protocol: 'https',
-}
-FA = {
-  from: acct,
-}
+u5 = { internalType: uc, name: '', type: uc };
+u6 = { internalType: uc + u0, name: '', type: uc + u0 };
+IA = { host: 'ipfs.infura.io', port: 5001, protocol: 'https' };
 function waitTxt(a, b) {
   $('#' + b).html(a > 0 ? 'Loading...' : '');
 }
@@ -69,6 +38,7 @@ async function load(a, b) {
     web3 = web3.eth;
     acct = await ethereum.request({ method: 'eth_requestAccounts' });
     acct = acct[0];
+    FA = { from: acct };
     if ((await web3.net.getId()) != CHAIN) {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
