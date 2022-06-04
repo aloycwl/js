@@ -6,7 +6,7 @@
   async function draw(s) {
     img = new Image();
     img.setAttribute('crossorigin', 'anonymous');
-    img.src = `https://aloycwl.github.io/js/Examples/IFPS_Upload_Canvas_${s}.png`;
+    img.src = `https://ipfs.io/ipfs/${s}.png`;
     return new Promise((resolve) => {
       img.onload = function () {
         cd.drawImage(img, 0, 0);
@@ -15,8 +15,8 @@
     });
   }
   async function load() {
-    await draw('1');
-    await draw('0');
+    await draw('bafybeiacbeuxfdqfmlxnugbmqa5di6g52e7lyy64btn6ostohztnaafrmy/1');
+    await draw('bafybeialtoqrfbo6kqiawnebygsurxoe6vx7kwsoobeihjymremuutnwni/0');
     ipfs = IpfsApi({
       host: 'ipfs.infura.io',
       port: 5001,
