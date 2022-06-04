@@ -35,3 +35,7 @@ Added promise for async to only allow ipfs action after all images are loaded
 <a href="https://aloycwl.github.io/js/Examples/Web3_List_Token_Holders_getPastEvents.html">Web3_List_Token_Holders_getPastEvents.html</a><br>
 Using ABI and contract address to get all emitted events with the owner addresses<br>
 Put them into an unique only array
+
+<a href="https://aloycwl.github.io/js/Examples/Canvas_Scrolling_Background.html">Canvas_Scrolling_Background.html</a><br>
+Panaroma landscape background scrolling<br>
+Perpetual scrolling with setInterval reset to prevent unintended stoppage
