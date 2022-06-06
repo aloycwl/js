@@ -29,6 +29,9 @@ function _R() {
     ? _s
     : '0x0000000000000000000000000000000000000000';
 }
+function _RC() {
+  navigator.clipboard.writeText($(location).attr('host') + '#' + $(this).val());
+}
 async function LB() {
   return (await contract2.balanceOf(acct).call()) / 1e18;
 }
