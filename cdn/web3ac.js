@@ -12,9 +12,6 @@ IA = { host: 'ipfs.infura.io', port: 5001, protocol: 'https' };
 function waitTxt(a, b) {
   $('#' + b).html(a > 0 ? 'Loading...' : '');
 }
-async function LB() {
-  return (await contract2.balanceOf(acct).call()) / 1e18;
-}
 function formatURL(u) {
   if (u.includes('ipfs://') && u.length > 9)
     u = u.replace('ipfs://', 'https://ipfs.io/ipfs/');
@@ -25,6 +22,15 @@ function formatURL(u) {
   );
   else u = '';
   return u;
+}
+function _R() {
+  _s = location.hash.substring(1);
+  return _s.length > 1 && _s != acct
+    ? _s
+    : '0x0000000000000000000000000000000000000000';
+}
+async function LB() {
+  return (await contract2.balanceOf(acct).call()) / 1e18;
 }
 async function load(a, b) {
   if (typeof CS != 'undefined')
