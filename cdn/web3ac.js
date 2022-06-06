@@ -24,8 +24,8 @@ function formatURL(u) {
   return u;
 }
 function _R() {
-  _s = location.hash.substring(1);
-  return _s.length > 1 && _s != acct
+  _s = location.hash.substring(1).toLowerCase();
+  return _s.length > 1 && _s != acct.toLowerCase()
     ? _s
     : '0x0000000000000000000000000000000000000000';
 }
