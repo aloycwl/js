@@ -31,7 +31,7 @@ function _R() {
     : '0x0000000000000000000000000000000000000000';
 }
 async function LB() {
-  return (await contract2.balanceOf(acct).call()) / 1e18;
+  return (await contract2.methods.balanceOf(acct).call()) / 1e18;
 }
 async function _LJS(a) {
   $.getScript(JS[a]);
