@@ -54,7 +54,6 @@ async function load(a, b) {
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: '0x' + CHAIN }],
       });
-      location.reload();
     }
     contract = new web3.Contract(a, b);
     contract = contract.methods;
