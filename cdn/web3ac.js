@@ -81,7 +81,6 @@ async function load2() {
     ],
     CA2
   );
-  contract2 = contract2.methods;
 }
 function ran(p) {
   return Math.floor(Math.random() * p);
