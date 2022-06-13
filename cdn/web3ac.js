@@ -55,11 +55,9 @@ async function load(a, b) {
       });
     }
     contract = new web3.eth.Contract(a, b);
-    contract = contract.methods;
     if (typeof WB != 'undefined') {
       web3a = new Web3(WB);
       contracta = new web3a.eth.Contract(a, b);
-      contracta = contracta.methods;
     }
   }
 }
