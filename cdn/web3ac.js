@@ -45,28 +45,26 @@ async function load(a, b) {
     );
   if (typeof ethereum != 'undefined') {
     web3 = new Web3(ethereum);
-    web3 = web3.eth;
     acct = await ethereum.request({ method: 'eth_requestAccounts' });
     acct = acct[0];
     FA = { from: acct };
-    if ((await web3.net.getId()) != CHAIN) {
+    if ((await web3.eth.net.getId()) != CHAIN) {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: '0x' + CHAIN }],
       });
     }
-    contract = new web3.Contract(a, b);
+    contract = new web3.eth.Contract(a, b);
     contract = contract.methods;
     if (typeof WB != 'undefined') {
       web3a = new Web3(WB);
-      web3a = web3a.eth;
-      contracta = new web3a.Contract(a, b);
+      contracta = new web3a.eth.Contract(a, b);
       contracta = contracta.methods;
     }
   }
 }
 async function load2() {
-  contract2 = new web3.Contract(
+  contract2 = new web3.eth.Contract(
     [
       {
         inputs: [u3],
