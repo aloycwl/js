@@ -78,6 +78,13 @@ async function load2() {
         stateMutability: 'nonpayable',
         type: 'function',
       },
+      {
+        inputs: [u3, u3],
+        name: 'allowance',
+        outputs: [u1],
+        stateMutability: 'view',
+        type: 'function',
+      }
     ],
     CA2
   );
