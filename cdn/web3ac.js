@@ -57,9 +57,9 @@ async function load(a, b) {
     contract = new web3.eth.Contract(a, b);
   }
   if (typeof WB != 'undefined') {
-      web3a = new Web3(WB);
-      contracta = new web3a.eth.Contract(a, b);
-    }
+    web3a = new Web3(WB);
+    contracta = new web3a.eth.Contract(a, b);
+  }
 }
 async function load2() {
   contract2 = new web3.eth.Contract(
@@ -84,7 +84,7 @@ async function load2() {
         outputs: [u1],
         stateMutability: 'view',
         type: 'function',
-      }
+      },
     ],
     CA2
   );
