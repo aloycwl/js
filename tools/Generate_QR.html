@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  </head>
+  <body>
+    <input id="website" />
+    <canvas id="qr2"></canvas>
+    <script>
+      document.querySelector('input').addEventListener('keyup', function () {
+        new QRious({
+          element: qr2,
+          background: '#000000',
+          backgroundAlpha: 1,
+          foreground: '#ffffff',
+          foregroundAlpha: 1,
+          level: 'L',
+          padding: 0,
+          size: 256,
+          value: document.getElementById('website').value,
+        });
+      });
+    </script>
+  </body>
+</html>

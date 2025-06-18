@@ -1,0 +1,28 @@
+<html>
+  <head></head>
+  <body>
+    <input type="file" multiple accept="image/*" />
+    <div></div>
+  </body>
+  <script>
+    document.querySelector('input').addEventListener('change', function () {
+      for (let f of this.files)
+        new Promise(function (resolve) {
+          let r = new Image();
+          r.addEventListener('load', function () {
+            resolve(r);
+          });
+          r.src = URL.createObjectURL(f);
+        }).then(function (r) {
+          c = document.createElement('canvas');
+          c.width = r.width > 300 ? 300 : r.width;
+          c.height = (r.height * c.width) / r.width;
+          c.getContext('2d').drawImage(r, 0, 0, c.width, c.height);
+          document.querySelector('div').innerHTML += `<img src=${c.toDataURL(
+            'image/webp',
+            0.1
+          )}>`;
+        });
+    });
+  </script>
+</html>
